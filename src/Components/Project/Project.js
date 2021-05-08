@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Frame, Scroll, useAnimation } from "framer";
 
@@ -9,11 +9,52 @@ import sound from '../../resources/icons/sound.svg';
 import upArrow from '../../resources/icons/upArrow.svg';
 import downArrow from '../../resources/icons/downArrow.svg';
 import cross from '../../resources/icons/cross.svg';
-import cleanex from '../../resources/images/pages/cleanex.jpg';
+import cleanex from '../../resources/images/pages/cleanex.png';
+import fastMart from '../../resources/images/pages/fastMart.png';
+import metroSpire from '../../resources/images/pages/metroSpire.png';
 
 
 function Project() {
 	const { type, id } = useParams();
+
+	const [projectInfo, setProjectInfo] = useState({
+		screenshot: fastMart,
+		headLine: 'FastMart | FASTEST ONLINE SHOPPING HUB',
+		details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil.'
+	});
+	let screenshot;
+	let headLine;
+	let details;
+	useEffect(() => {
+		if (type === 'mern' && id === '1') {
+			setProjectInfo({
+				screenshot: fastMart,
+				headLine: 'FastMart | FASTEST ONLINE SHOPPING HUB',
+				details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil.'
+			});
+		}
+		if (type === 'mern' && id === '2') {
+			setProjectInfo({
+				screenshot: cleanex,
+				headLine: 'CLEANEX | URBAN CLEANING SERVICE',
+				details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil.'
+			});
+		}
+		if (type === 'react' && id === '1') {
+			setProjectInfo({
+				screenshot: metroSpire,
+				headLine: 'METRO SPIRE | ONLINE TICKET PURCHASING STYSTEM',
+				details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil.'
+			});
+		}
+		if (type === 'react' && id === '2') {
+			setProjectInfo({
+				screenshot: metroSpire,
+				headLine: 'IPL AUCTION | BUY THE BEST PLAYERS FOR YOUR TEAM',
+				details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil.'
+			});
+		}
+	}, [screenshot]);
 
 	const randomColor = ['#cfb4e8', '#ba94de'];
 
@@ -42,13 +83,13 @@ function Project() {
 				<div className="crossHolder">
 					<img src={cross} alt="" />
 				</div>
-				<Scroll className='scroll' dragEnabled={true}  scrollAnimate = { controls } direction="vertical" width={'57%'} height={'40vh'} radius={10}>
+				<Scroll className='scroll' dragEnabled={true} direction="vertical" width={'57%'} height={'40vh'} radius={10}>
 					<div className="holder">
-						<img src={cleanex} alt="" />
+						<img src={projectInfo.screenshot} alt="" />
 					</div>
 				</Scroll>
 				<div className="title">
-					CLEANEX | URBAN CLEANING SERVICE
+					{projectInfo.headLine}
 				</div>
 			</div>
 			<div className="rightSide">

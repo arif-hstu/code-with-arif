@@ -27,8 +27,6 @@ function ProjectGallery() {
 		borderBottom: 'none'
 	}
 
-	console.log(projectType);
-
 	return (
 		<div className=" ProjectGallery">
 			<div className='titleHolder'>
@@ -40,42 +38,39 @@ function ProjectGallery() {
 			</div>
 
 			<div className="filterHolder">
-				<Link style={projectType==='mern' && filterStyle || noFilterStyle} to='#mern' onClick={() => { filterType('mern') }} className="filter filter1"><span>MERN Stack</span></Link>
-				<Link style={projectType==='react' && filterStyle || noFilterStyle} to='#react' onClick={() => { filterType('react') }} className="filter filter2">React App</Link>
-				<Link style={projectType==='javascript' && filterStyle || noFilterStyle}  to='#javascript' onClick={() => { filterType('javascript') }} className="filter filter3">Javascript</Link>
-				<Link style={projectType==='vue' && filterStyle || noFilterStyle}  to='#vue' onClick={() => { filterType('vue') }} className="filter filter4">Vue</Link>
+				<Link style={projectType === 'mern' && filterStyle || noFilterStyle} to='#mern' onClick={() => { filterType('mern') }} className="filter filter1"><span>MERN Stack</span></Link>
+				<Link style={projectType === 'react' && filterStyle || noFilterStyle} to='#react' onClick={() => { filterType('react') }} className="filter filter2">React App</Link>
+				<Link style={projectType === 'javascript' && filterStyle || noFilterStyle} to='#javascript' onClick={() => { filterType('javascript') }} className="filter filter3">Javascript</Link>
+				<Link style={projectType === 'vue' && filterStyle || noFilterStyle} to='#vue' onClick={() => { filterType('vue') }} className="filter filter4">Vue</Link>
 			</div>
 
 			<div className="projectHolder">
 				{
 					projectType === 'mern' &&
 					<>
-						<div onClick={()=>history.push('/project/mern/1')} className="project">
-							<img src={cleanex} alt="" className='projectImg' />
-							<img src={zoomIn} alt="" className="icon" />
-							<a className="title smallPara">Cleanex | Service Website</a>
-						</div>
-						<div onClick={()=>history.push('/project/mern/2')} className="project">
+						<div onClick={() => history.push('/project/mern/1')} className="project">
 							<img src={fastMart} alt="" className='projectImg' />
 							<img src={zoomIn} alt="" className="icon" />
 							<a className="title smallPara">FastMart | Online Shopping Hub </a>
+						</div>
+
+						<div onClick={() => history.push('/project/mern/2')} className="project">
+							<img src={cleanex} alt="" className='projectImg' />
+							<img src={zoomIn} alt="" className="icon" />
+							<a className="title smallPara">Cleanex | Service Website</a>
 						</div>
 					</>
 				}
 				{
 					projectType === 'react' &&
 					<>
-						<div onClick={()=>history.push('/project/react/1')} className="project">
+						<div onClick={() => history.push('/project/react/1')} className="project">
 							<img src={metroSpire} alt="" className='projectImg' />
 							<img src={zoomIn} alt="" className="icon" />
 							<a className="title smallPara">Cleanex | Service Website</a>
 						</div>
-						<div onClick={()=>history.push('/project/react/2')} className="project">
-							<img src={cleanex} alt="" className='projectImg' />
-							<img src={zoomIn} alt="" className="icon" />
-							<a className="title smallPara">Cleanex | Service Website</a>
-						</div>
-						<div onClick={()=>history.push('/project/react/3')} className="project">
+
+						<div onClick={() => history.push('/project/react/2')} className="project">
 							<img src={metroSpire} alt="" className='projectImg' />
 							<img src={zoomIn} alt="" className="icon" />
 							<a className="title smallPara">Cleanex | Service Website</a>
@@ -85,11 +80,6 @@ function ProjectGallery() {
 				{
 					projectType === 'javascript' &&
 					<>
-						<div onClick={()=>history.push('/project/javascript/1')} className="project">
-							<img src={fastMart} alt="" className='projectImg' />
-							<img src={zoomIn} alt="" className="icon" />
-							<a className="title smallPara">Cleanex | Service Website</a>
-						</div>
 					</>
 				}
 			</div>

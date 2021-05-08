@@ -47,6 +47,14 @@
 	border-radius: 8px;
 }
 
+.ExpertInfo .infoHolder .skills #node{
+	width: 2rem;
+}
+
+.ExpertInfo .infoHolder .skills #javascript{
+	width: 2rem;
+}
+
 .ExpertInfo .infoHolder .skills .skill img{
 	width: 1.5rem;
 }

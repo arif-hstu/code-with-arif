@@ -52,7 +52,7 @@ function ExpertInfo() {
 						<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
 					</div>
 					<div className="skill">
-					<img src={js} alt="" />
+					<img id='javascript' src={js} alt="" />
 						<h3>
 							JAFASCRIPT
 					</h3>
@@ -68,7 +68,7 @@ function ExpertInfo() {
 						<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
 					</div>
 					<div className="skill">
-					<img src={node} alt="" />
+					<img id='node' src={node} alt="" />
 						<h3>
 							NODE
 					</h3>

@@ -104,6 +104,11 @@
 	visibility: visible;
 }
 
+.BlogGallery .projectHolder .demo {
+	margin-top: 100%;
+	justify-self: center;
+	align-self: center;
+}
 
 @media only screen and (max-width: 768px) {
 	.BlogGallery {
