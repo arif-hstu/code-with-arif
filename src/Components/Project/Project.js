@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useHistory } from 'react-router-dom';
 import { Frame, Scroll, useAnimation } from "framer";
 
 import './Project.css';
@@ -12,10 +12,12 @@ import cross from '../../resources/icons/cross.svg';
 import cleanex from '../../resources/images/pages/cleanex.png';
 import fastMart from '../../resources/images/pages/fastMart.png';
 import metroSpire from '../../resources/images/pages/metroSpire.png';
+import fakeData from './fakeData';
 
 
 function Project() {
 	const { type, id } = useParams();
+	const history = useHistory();
 
 	const [projectInfo, setProjectInfo] = useState({
 		screenshot: fastMart,
@@ -36,25 +38,25 @@ function Project() {
 		if (type === 'mern' && id === '2') {
 			setProjectInfo({
 				screenshot: cleanex,
-				headLine: 'CLEANEX | URBAN CLEANING SERVICE',
-				details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil.'
+				headLine: fakeData.cleanex.headLine,
+				details: fakeData.cleanex.details
 			});
 		}
 		if (type === 'react' && id === '1') {
 			setProjectInfo({
 				screenshot: metroSpire,
-				headLine: 'METRO SPIRE | ONLINE TICKET PURCHASING STYSTEM',
-				details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil.'
+				headLine: fakeData.metroSpire.headLine,
+				details: fakeData.metroSpire.details
 			});
 		}
 		if (type === 'react' && id === '2') {
 			setProjectInfo({
 				screenshot: metroSpire,
-				headLine: 'IPL AUCTION | BUY THE BEST PLAYERS FOR YOUR TEAM',
-				details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil.'
+				headLine: fakeData.metroSpire.headLine,
+				details: fakeData.metroSpire.details
 			});
 		}
-	}, [screenshot]);
+	}, [type]);
 
 	const randomColor = ['#cfb4e8', '#ba94de'];
 
@@ -81,7 +83,7 @@ function Project() {
 
 			<div className="middlePart">
 				<div className="crossHolder">
-					<img src={cross} alt="" />
+					<img style={{ cursor: 'pointer' }} onClick={() => history.push('/projects')} src={cross} alt="" />
 				</div>
 				<Scroll className='scroll' dragEnabled={true} direction="vertical" width={'57%'} height={'40vh'} radius={10}>
 					<div className="holder">
@@ -98,7 +100,7 @@ function Project() {
 				</div>
 				<div className="second">
 					<div className="details">
-						<p><Link to='/project/mern/1/details/'>Live Site</Link></p>
+						<p><Link to={`/project/${type}/${id}/details`}>DETAILS</Link></p>
 					</div>
 				</div>
 				<div className="third">

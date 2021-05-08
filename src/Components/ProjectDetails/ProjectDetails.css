@@ -59,6 +59,13 @@
 	border-radius: 50%;
 }
 
+.ProjectDetails .middlePart .detailsHolder {
+	background-color: orange;
+	margin-top: 3rem;
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+}
 
 .ProjectDetails .middlePart .scroll {
 	width: 100%;
