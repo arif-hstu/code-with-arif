@@ -22,7 +22,10 @@ function Project() {
 	const [projectInfo, setProjectInfo] = useState({
 		screenshot: fastMart,
 		headLine: 'FastMart | FASTEST ONLINE SHOPPING HUB',
-		details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil.'
+		details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil.',
+		liveSite: 'https://fast-mart.web.app/',
+		gitHubClient: 'https://github.com/arif-hstu/fastmart-mern-client',
+		gitHubServer: 'https://github.com/arif-hstu/fastmart-mern-server'
 	});
 	let screenshot;
 	let headLine;
@@ -32,28 +35,40 @@ function Project() {
 			setProjectInfo({
 				screenshot: fastMart,
 				headLine: 'FastMart | FASTEST ONLINE SHOPPING HUB',
-				details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil.'
+				details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil.',
+				liveSite: 'https://fast-mart.web.app/',
+				gitHubClient: 'https://github.com/arif-hstu/fastmart-mern-client',
+				gitHubServer: 'https://github.com/arif-hstu/fastmart-mern-server'
 			});
 		}
 		if (type === 'mern' && id === '2') {
 			setProjectInfo({
 				screenshot: cleanex,
 				headLine: fakeData.cleanex.headLine,
-				details: fakeData.cleanex.details
+				details: fakeData.cleanex.details,
+				liveSite: fakeData.cleanex.liveSite,
+				gitHubClient: fakeData.cleanex.gitHubClient,
+				gitHubServer: fakeData.cleanex.gitHubServer
 			});
 		}
 		if (type === 'react' && id === '1') {
 			setProjectInfo({
 				screenshot: metroSpire,
 				headLine: fakeData.metroSpire.headLine,
-				details: fakeData.metroSpire.details
+				details: fakeData.metroSpire.details,
+				liveSite: fakeData.metroSpire.liveSite,
+				gitHubClient: fakeData.metroSpire.gitHubClient,
+				gitHubServer: fakeData.metroSpire.gitHubServer
 			});
 		}
 		if (type === 'react' && id === '2') {
 			setProjectInfo({
 				screenshot: metroSpire,
 				headLine: fakeData.metroSpire.headLine,
-				details: fakeData.metroSpire.details
+				details: fakeData.metroSpire.details,
+				liveSite: fakeData.metroSpire.liveSite,
+				gitHubClient: fakeData.metroSpire.gitHubClient,
+				gitHubServer: fakeData.metroSpire.gitHubServer
 			});
 		}
 	}, [type]);
@@ -110,8 +125,8 @@ function Project() {
 			<div className="bottomPart">
 				<div className="bottomHolder">
 					<div className='bottom'>
-						<p>Back</p>
-						<p>|</p>
+						<p hidden>Back</p>
+						<p hidden> |</p>
 						<p>Live Site</p>
 						<p>|</p>
 						<p>Github Client</p>

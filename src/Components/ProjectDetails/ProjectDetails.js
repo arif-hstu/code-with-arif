@@ -66,7 +66,18 @@ function ProjectDetails() {
 					<img style={{cursor: 'pointer'}} onClick={() => history.push(`/project/${type}/${id}`)} src={cross} alt="" />
 				</div>
 				<div className="detailsHolder">
-					{projectInfo.details}	
+					<h3>
+						Overview
+					</h3>
+					<p>
+					{projectInfo.details.points}
+					</p>
+					<h3>
+						Technology
+					</h3>
+					<p>
+						{projectInfo.details.technology}
+					</p>
 				</div>
 			</div>
 			<div className="rightSide">
@@ -75,8 +86,8 @@ function ProjectDetails() {
 			<div className="bottomPart">
 				<div className="bottomHolder">
 					<div className='bottom'>
-						<p>Back</p>
-						<p>|</p>
+						<p hidden>Back</p>
+						<p hidden>|</p>
 						<p>Live Site</p>
 						<p>|</p>
 						<p>Github Client</p>

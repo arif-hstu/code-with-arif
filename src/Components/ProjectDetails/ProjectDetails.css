@@ -60,11 +60,17 @@
 }
 
 .ProjectDetails .middlePart .detailsHolder {
-	background-color: orange;
-	margin-top: 3rem;
-	width: 80%;
+	margin-top: 8vh;
+	width: 70%;
 	margin-right: auto;
 	margin-left: auto;
+	color: white;
+	text-align: center;
+}
+
+.ProjectDetails .middlePart .detailsHolder h3{
+	color: #e32f4e;
+	text-transform: uppercase;
 }
 
 .ProjectDetails .middlePart .scroll {
