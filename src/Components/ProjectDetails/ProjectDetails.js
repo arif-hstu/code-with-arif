@@ -22,35 +22,47 @@ function ProjectDetails() {
 		details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil.'
 	})
 
-	const randomColor = ['#393939', '#1e1e1e'];
+	const randomColor = [['#393939', '#1e1e1e'], ['#64d6e2', '#64d6e2']];
 
 	const gradient = {
-		backgroundImage: 'radial-gradient(circle, ' + randomColor[0] + ' 0%, ' + randomColor[0] + ' 10%, ' + randomColor[1] + ' 60%)'
+		backgroundImage: 'radial-gradient(circle, ' + randomColor[0][0] + ' 0%, ' + randomColor[0][0] + ' 10%, ' + randomColor[0][1] + ' 60%)'
 	}
 
 	useEffect(() => {
 		if (type === 'mern' && id === '1') {
 			setProjectInfo({
 				headLine: 'FastMart | FASTEST ONLINE SHOPPING HUB',
-				details: fakeData.fastMart.details
+				details: fakeData.fastMart.details,
+				liveSite: fakeData.fastMart.liveSite,
+				gitHubClient: fakeData.fastMart.gitHubClient,
+				gitHubServer: fakeData.fastMart.gitHubServer
 			});
 		}
 		if (type === 'mern' && id === '2') {
 			setProjectInfo({
 				headLine: fakeData.cleanex.headLine,
-				details: fakeData.cleanex.details
+				details: fakeData.cleanex.details,
+				liveSite: fakeData.cleanex.liveSite,
+				gitHubClient: fakeData.cleanex.gitHubClient,
+				gitHubServer: fakeData.cleanex.gitHubServer
 			});
 		}
 		if (type === 'react' && id === '1') {
 			setProjectInfo({
 				headLine: fakeData.metroSpire.headLine,
-				details: fakeData.metroSpire.details
+				details: fakeData.metroSpire.details,
+				liveSite: fakeData.metroSpire.liveSite,
+				gitHubClient: fakeData.metroSpire.gitHubClient,
+				gitHubServer: fakeData.metroSpire.gitHubServer
 			});
 		}
 		if (type === 'react' && id === '2') {
 			setProjectInfo({
 				headLine: fakeData.metroSpire.headLine,
-				details: fakeData.metroSpire.details
+				details: fakeData.metroSpire.details,
+				liveSite: fakeData.metroSpire.liveSite,
+				gitHubClient: fakeData.metroSpire.gitHubClient,
+				gitHubServer: fakeData.metroSpire.gitHubServer
 			});
 		}
 	}, [type]);
@@ -70,6 +82,9 @@ function ProjectDetails() {
 						Overview
 					</h3>
 					<p>
+						{projectInfo.headLine}
+					</p>
+					<p>
 					{projectInfo.details.points}
 					</p>
 					<h3>
@@ -88,11 +103,11 @@ function ProjectDetails() {
 					<div className='bottom'>
 						<p hidden>Back</p>
 						<p hidden>|</p>
-						<p>Live Site</p>
+						<a target='_blank' href={projectInfo.liveSite}>Live Site</a>
 						<p>|</p>
-						<p>Github Client</p>
+						<a target='_blank' href={projectInfo.gitHubClient}>Github Client</a>
 						<p>|</p>
-						<p>Github Server</p>
+						<a target='_blank' href={projectInfo.gitHubServer}>Github Server</a>
 					</div>
 				</div>
 			</div>

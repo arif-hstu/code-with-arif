@@ -42,7 +42,7 @@
 }
 
 .Project .middlePart .scroll{
-	box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+	box-shadow: 0 15px 40px rgba(0,0,0,0.5);
 }
 
 .Project .middlePart .crossHolder {
@@ -111,8 +111,8 @@
 
 .Project .rightSide .second .details p > *{
 	text-decoration: none;
-	font-size: 12px;
-	font-weight: 500;
+	font-size: 14px;
+	font-weight: 700;
 }
 
 .Project .bottomPart .bottomHolder {
@@ -125,5 +125,10 @@
 	align-items: center;
 	color: white;
 	font-weight: 500;
+}
+
+.Project .bottomPart .bottomHolder .bottom a{
+	text-decoration: none;
+	color: white;
 }
 

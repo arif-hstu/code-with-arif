@@ -19,6 +19,7 @@ function Project() {
 	const { type, id } = useParams();
 	const history = useHistory();
 
+	const [randomNumber, setRandomNumber] = useState(0);
 	const [projectInfo, setProjectInfo] = useState({
 		screenshot: fastMart,
 		headLine: 'FastMart | FASTEST ONLINE SHOPPING HUB',
@@ -71,12 +72,14 @@ function Project() {
 				gitHubServer: fakeData.metroSpire.gitHubServer
 			});
 		}
+
+		setRandomNumber(Math.floor(Math.random() * (randomColor.length)));
 	}, [type]);
 
-	const randomColor = ['#cfb4e8', '#ba94de'];
-
+	const randomColor = [['#393939', '#1e1e1e'], ['#cfb4e8', '#ba94de'], ['#785ebb', '#785ebb'], ['#a09de5', '#a09de5'], ['#79bbb5', '#79bbb5'], ['#dfbc94','#dfbc94'], ['#63c5ab','#63c5ab'], ['#87c4a3','#87c4a3']];
+	
 	const gradient = {
-		backgroundImage: 'radial-gradient(circle, ' + randomColor[0] + ' 0%, ' + randomColor[0] + ' 10%, ' + randomColor[1] + ' 60%)'
+		backgroundImage: 'radial-gradient(circle, ' + randomColor[randomNumber][0] + ' 0%, ' + randomColor[randomNumber][0] + ' 10%, ' + randomColor[randomNumber][1] + ' 60%)'
 	}
 
 	const controls = useAnimation();
@@ -115,7 +118,7 @@ function Project() {
 				</div>
 				<div className="second">
 					<div className="details">
-						<p><Link to={`/project/${type}/${id}/details`}>DETAILS</Link></p>
+						<p><Link style={{color: `${randomColor[randomNumber][0]}`}} to={`/project/${type}/${id}/details`}>DETAILS</Link></p>
 					</div>
 				</div>
 				<div className="third">
@@ -127,11 +130,11 @@ function Project() {
 					<div className='bottom'>
 						<p hidden>Back</p>
 						<p hidden> |</p>
-						<p>Live Site</p>
+						<a target='_blank' href={projectInfo.liveSite}>Live Site</a>
 						<p>|</p>
-						<p>Github Client</p>
+						<a target='_blank' href={projectInfo.gitHubClient}>Github Client</a>
 						<p>|</p>
-						<p>Github Server</p>
+						<a target='_blank' href={projectInfo.gitHubServer}>Github Server</a>
 					</div>
 				</div>
 			</div>
