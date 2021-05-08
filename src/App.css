@@ -1,0 +1,78 @@
+:root {
+  --margin: 5%;
+  --top-margin: 6rem;
+
+  --primary: #fff;
+  --dark: #020312;
+  --secondary: #eae4d7;
+  --black: black;
+  --white: #f26c4f;
+  --light: #eae4d7;
+  --tartiary: #195cc8;
+  --quartarnary: white;
+
+  --font-family: 'Oswald', sans-serif;
+  --font-light: 300;
+  --font-regular: 500;
+  --font-bold: 600;
+  --font-bolder: 800;
+  --font-mini: 8px;
+  --font-small: 12px;
+  --font-regular-size: 12px;
+  --font-large: 14px;
+  --font-larger: 24px;
+  --font-huge: 48px;
+
+  --navHeight: 3rem;
+  --line-distance: 8px;
+};
+
+body {
+  color: var(--primary);
+  overflow: hidden;
+}
+
+body h1 {
+  font-family: var(--font-family);
+  font-size: var(--font-huge);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+body h1:first-child {
+  color: var(--white);
+  margin-bottom: -15px;
+  margin-top: -100px;
+}
+
+
+.App {
+  background-color: var(--dark);
+  overflow: hidden;
+}
+
+.primaryBtn, 
+.primaryBtn:focus,
+#primaryBtn, 
+#primaryBtn:focus {
+  height: 1.5rem;
+  color: var(--dark);
+  background-color: var(--white);
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+.smallPara {
+  font-size: var(--font-small);
+}
+
+
+
+/*color: 
+background: #020312
+card: #090c17
+button first: #f26c4f;
+text color: white;
+*/

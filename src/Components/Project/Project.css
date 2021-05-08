@@ -1,0 +1,127 @@
+.Project {
+	width: 100vw;
+	height: 100vh;
+	/*background-color: #ba94de;*/
+
+	display: grid;
+	grid-template-columns: 0.2fr 1fr 0.2fr;
+	grid-template-rows: 1fr 0.2fr;
+	grid-template-areas: 
+	'leftSide middlePart rightSide'
+	'bottomPart bottomPart bottomPart';
+	justify-content: center;
+	align-items: center;
+}
+
+.Project .leftSide {
+	grid-area: leftSide;
+	text-align: center;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-gap: 0.5rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.Project .middlePart {
+	margin-left: 10%;
+	margin-right: 10%;
+
+	grid-area: middlePart;
+	height: 50vh;
+
+	display: flex;
+	flex-direction: column;
+}
+.Project .middlePart .title{
+	margin-top: auto;
+	color: white;
+	text-align: center;
+	font-size: var(--font-larger);
+	font-weight: 700;
+}
+
+.Project .middlePart .scroll{
+	box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+}
+
+.Project .middlePart .crossHolder {
+	margin-top: -5rem;
+	display: flex;
+	justify-content: center;
+}
+
+.Project .middlePart .crossHolder img{
+	width: 1.5rem;
+	border: 3px solid white;
+	padding: 8px;
+	border-radius: 50%;
+}
+
+
+.Project .middlePart img{
+	width: 100%;
+}
+
+.Project .middlePart .scroll {
+	width: 100%;
+}
+
+.Project .rightSide {
+	grid-area: rightSide;
+	text-align: center;
+}
+
+.Project .bottomPart {
+	grid-area: bottomPart;
+	display: flex;
+	justify-content: center;
+}
+
+.Project .first,
+.Project .second,
+.Project .third {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.Project .first,
+.Project .second ,
+.Project .third {
+	height:5rem;
+}
+
+.Project .first > img,
+.Project .second > img,
+.Project .third > img{
+	width: 2rem;
+}
+
+.Project .rightSide .second .details{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	border-radius: 50%;
+	width: 5rem;
+	height: 5rem;
+}
+
+.Project .rightSide .second .details p > *{
+	text-decoration: none;
+}
+
+.Project .bottomPart .bottomHolder {
+	width: 50%;
+}
+
+.Project .bottomPart .bottom{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+	font-weight: 500;
+}
+

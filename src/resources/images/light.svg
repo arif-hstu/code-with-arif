@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg id="Layer_1" data-name="Layer 1" viewBox="0 0 819.44 741.25" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>.cls-1{fill:url(#linear-gradient);}</style>
+    <linearGradient id="linear-gradient" x1="199.98" y1="-139.86" x2="784.99" y2="465.94" gradientUnits="userSpaceOnUse">
+      <stop offset="0.16" stop-color="rgba(255,255,255,0.4)"/>
+      <stop offset="0.38" stop-color="rgba(255,255,255,0.4)" stop-opacity="0.76"/>
+      <stop offset="0.81" stop-color="rgba(255,255,255,0.4)" stop-opacity="0.12"/>
+      <stop offset="0.89" stop-color="rgba(255,255,255,0.4)" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <title>light</title>
+  <path class="cls-1" d="M 133.444 -83.476 L 595.22 649.19 L 948.22 255.19 L 136.451 -87.545 C 136.451 -87.545 134.599 -82.497 133.444 -83.476 Z" transform="translate(-128.79 92.06)"/>
+</svg>

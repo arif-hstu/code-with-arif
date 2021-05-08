@@ -1,0 +1,48 @@
+.MenuItems {
+	margin-left: var(--margin);
+	color: var(--primary);
+  	background-image: var(--primary);
+  	height: 100%;
+  	margin-right: var(--margin);
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-areas: 
+	'titleHolder titleHolder titleHolder titleHolder titleHolder titleHolder'
+	'blogHolder blogHolder blogHolder blogHolder blogHolder blogHolder';
+	align-items: center;
+	justify-content: center;
+	grid-template-rows: 0.5fr 1fr;
+}
+
+.MenuItems .titleHolder {
+	grid-area: titleHolder;
+	margin-top: var(--top-margin);
+}
+
+.MenuItems .blogHolder {
+	grid-area: blogHolder;
+	margin-top: 2%;
+	margin-bottom: auto;
+	display: grid;
+	grid-template-columns: repeat( auto-fit, minmax(3rem, 1fr));
+	grid-column-gap: 10%;
+	justify-content: center;
+	align-items: center;
+}
+
+.MenuItems .blogHolder .imageHolder{
+	width: 12rem;
+	height: 8rem;
+
+	-webkit-filter: grayscale(100%);
+	filter:  grayscale(100%) invert(70%);
+	border-radius: 5px;
+	margin-top: auto;
+	background-color: red;
+	background-size: 100%;
+}
+.MenuItems .blogHolder .imageHolder:hover{
+	-webkit-filter: grayscale(0%);
+	filter:  grayscale(0%);
+}

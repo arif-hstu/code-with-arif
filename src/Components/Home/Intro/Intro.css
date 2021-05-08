@@ -1,0 +1,30 @@
+.Intro {
+	margin-left: var(--margin);
+	margin-right: var(--margin);
+	color: var(--primary);
+	display: grid;
+	grid-template-columns: 1fr 0.7fr;
+	align-items: center;
+	height: 100%;
+}
+
+.Intro{
+  background-image: var(--primary);
+}
+
+.Intro h1{
+	font-size: calc(var(--font-huge) * 1.5);
+}
+
+@media only screen and (max-width: 768px) {
+	.Intro {
+		display: grid;
+		grid-template-columns: 1fr;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+	.Intro h1{
+		font-size: var(--font-huge);
+	}
+}

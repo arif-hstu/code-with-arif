@@ -1,0 +1,116 @@
+.NavBarHolder {
+	position: relative;
+	z-index: 999;
+}
+
+.NavBarHolder .avatarHolder {
+	position: absolute;
+	z-index: 99;
+	right: var(--margin);
+	top: 25vh;
+}
+
+.NavBarHolder .avatarHolder img {
+	width: 350px;
+}
+
+.NavBar {
+	background-color: var(--dark);
+	height: 5rem;
+	color: var(--primary);
+	margin-left: var(--margin);
+	margin-right: var(--margin);
+	display: grid;
+	grid-template-columns: 1fr 1fr 0.01fr 1fr;
+	grid-template-areas: 
+	'logoHolder animatedLogoHolder avatarHolder infoHolder';
+}
+
+.NavBar .logoHolder {
+	grid-area: logoHolder;
+	margin-right: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: center;
+	justify-content: center;
+	width: 10rem;
+	z-index: 990;
+}
+
+.NavBar .avatarHolder {
+	grid-area: avatarHolder;
+}
+
+.NavBar .animatedLogoHolder {
+	grid-area: animatedLogoHolder;
+	justify-self: center;
+	align-self: center;
+	width: 100%;
+
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	z-index: 998;
+}
+
+.NavBar .animatedLogoHolder img{
+	width: 3rem;
+	/*margin-left: 60%;*/
+}
+
+.NavBar .logoHolder .bar {
+	justify-self: center;
+}
+
+.NavBar .logoHolder .logo > img {
+	height: 2rem;
+}
+
+.NavBar .logoHolder .logo .arrow {
+	position: absolute;
+	top: 2rem;
+	left: calc(var(--margin) + 1.5rem);
+	z-index: -10;
+	width: 45vw;
+}
+
+.NavBar .infoHolder {
+	grid-area: infoHolder;
+	margin-left: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	justify-content: center;
+	width: 15rem;
+	z-index: 998;
+}
+
+.NavBar .infoHolder > * {
+	margin: auto;
+}
+
+.NavBar .infoHolder img {
+	height: 2rem;
+}
+
+.NavBar .infoHolder .hire > *{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: var(--primary);
+}
+
+.NavBar .infoHolder img {
+	margin-right: 5px;
+}
+
+
+@media only screen and (max-width: 768px) {
+	.NavBarHolder .avatarHolder {
+		position: absolute;
+		z-index: 99;
+		right: 22%;
+		top: 45vh;
+	}
+}

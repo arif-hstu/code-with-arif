@@ -1,0 +1,131 @@
+
+.ContactInfo {
+	margin-left: var(--margin);
+	margin-right: var(--margin);
+	color: var(--primary);
+  	background-image: var(--primary);
+  	
+  	height: 100%;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 0.8fr 0.8fr 1fr;
+	grid-template-areas: 
+	'titleHolder titleHolder titleHolder titleHolder titleHolder titleHolder'
+	'detailsHolder detailsHolder detailsHolder detailsHolder detailsHolder detailsHolder'
+	'socialIcons socialIcons socialIcons socialIcons socialIcons socialIcons';
+	align-items: center;
+	justify-content: center;
+}
+
+.ContactInfo .titleHolder {
+	grid-area: titleHolder;
+	margin-top: auto;
+}
+
+.ContactInfo .detailsHolder {
+	grid-area: detailsHolder;
+	margin-bottom: auto;
+	margin-top: var(--top-magin);
+}
+
+.ContactInfo .socialIcons {
+	grid-area: socialIcons;
+	align-self: flex-start;
+}
+
+.ContactInfo .detailsHolder #message {
+ 	width: 50px;
+}
+
+.ContactInfo .detailsHolder form {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 2rem;
+	grid-template-areas: 
+	'part1 part2'
+	'part3 part3';
+}
+
+.ContactInfo form input, .ContactInfo form input:focus {
+	border-style: none;
+	background-color: rgba(0,0,0,0);
+	border-bottom: 1px solid rgba(25,92,200, 0.2);
+	font-size: var(--font-regular);
+	color: var(--gray);
+	height: 2rem;
+}
+
+.ContactInfo .detailsHolder form .part1{
+	grid-area: part1;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.ContactInfo .detailsHolder form .part2{
+	grid-area: part2;
+}
+.ContactInfo .detailsHolder form .part2 #message{
+	width: 100%;
+	height: 100%;
+}
+
+.ContactInfo .detailsHolder form .part3{
+	grid-area: part3;
+}
+
+.ContactInfo .detailsHolder form .part3 input {
+	margin-top: 2rem;
+	margin-right: 5rem;
+}
+
+.ContactInfo .socialIcons .icons img{
+	width: 2rem;
+}
+
+.ContactInfo .socialIcons .icons{
+	display: flex;
+	justify-content: space-around;
+}
+
+.ContactInfo .socialIcons .icons a:first-child {
+	margin-left: 30%;
+}
+
+.ContactInfo .socialIcons .icons a:last-child {
+	margin-right: 30%;
+}
+
+@media only screen and (max-width: 768px) {
+	.ContactInfo {
+		margin-right: var(--margin);
+		grid-template-rows: 1fr 1fr 0.3fr;
+	}
+	.ContactInfo .titleHolder {
+		text-align: center;
+	}
+
+	.ContactInfo .detailsHolder form {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-column-gap: 2rem;
+		grid-template-areas: 
+		'part1 part1'
+		'part2 parti2'
+		'part3 part3';
+	}
+	.ContactInfo .detailsHolder form .part2  {
+		margin-top: 2rem;
+	}
+	.ContactInfo .detailsHolder form .part2 #message{
+		width: 106%;
+		height: 3rem;
+	}
+
+}
+
+
+
