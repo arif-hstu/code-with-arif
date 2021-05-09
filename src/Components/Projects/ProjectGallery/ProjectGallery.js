@@ -33,7 +33,7 @@ function ProjectGallery() {
 				<h1>PORTFOLIO</h1>
 				<h1>MY WORK TABLE</h1>
 				<p className='smallPara'>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint inventore repudiandae ipsum aliquid hic sequi
+					I create outstanding UI/UX, branding web design & development solutions for startups & companies
 				</p>
 			</div>
 
