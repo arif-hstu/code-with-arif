@@ -125,6 +125,10 @@
 		height: 3rem;
 	}
 
+	.ContactInfo .titleHolder p{
+		display: none;
+	}
+
 }
 
 

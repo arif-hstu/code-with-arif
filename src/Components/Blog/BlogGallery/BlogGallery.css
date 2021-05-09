@@ -25,7 +25,7 @@
 
 .BlogGallery .filterHolder {
 	grid-area: filterHolder;
-	margin-top: calc(var(--top-margin) * -2);
+	margin-top: calc(var(--top-margin) * -1.2);
 	text-align: center;
 }
 
@@ -121,6 +121,11 @@
 	}
 	.BlogGallery .titleHolder {
 		text-align: center;
+	}
+
+		
+	.BlogGallery .titleHolder p{
+		display: none;
 	}
 
 }

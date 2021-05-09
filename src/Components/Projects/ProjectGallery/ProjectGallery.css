@@ -25,7 +25,7 @@
 
 .ProjectGallery .filterHolder {
 	grid-area: filterHolder;
-	margin-top: calc(var(--top-margin) * -2);
+	margin-top: calc(var(--top-margin) * -1.5);
 	text-align: center;
 }
 
@@ -40,7 +40,7 @@
 
 .ProjectGallery .projectHolder {
 	grid-area: projectHolder;
-	margin-top: calc(var(--top-margin) * -2);
+	margin-top: calc(var(--top-margin) * -1.2);
 	margin-bottom: auto;
 	display: grid;
 	grid-template-columns: repeat(2, minmax(3rem, 1fr));
@@ -119,4 +119,7 @@
 		text-align: center;
 	}
 
+	.ProjectGallery .titleHolder p{
+		display: none;
+	}
 }
