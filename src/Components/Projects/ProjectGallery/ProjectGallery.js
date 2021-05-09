@@ -67,13 +67,13 @@ function ProjectGallery() {
 						<div onClick={() => history.push('/project/react/1')} className="project">
 							<img src={metroSpire} alt="" className='projectImg' />
 							<img src={zoomIn} alt="" className="icon" />
-							<a className="title smallPara">Cleanex | Service Website</a>
+							<a className="title smallPara">MetroSpire | Online Ticket Purchasing system</a>
 						</div>
 
 						<div onClick={() => history.push('/project/react/2')} className="project">
 							<img src={metroSpire} alt="" className='projectImg' />
 							<img src={zoomIn} alt="" className="icon" />
-							<a className="title smallPara">Cleanex | Service Website</a>
+							<a className="title smallPara">MetroSpire | Online Ticket Purchasing system</a>
 						</div>
 					</>
 				}

@@ -25,8 +25,7 @@ function ExpertInfo() {
 				<h1>Front-End Web Developer</h1>
 				<h1>Graphic Designer</h1>
 				<p className='smallPara'>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint inventore repudiandae ipsum aliquid hic sequi
-				</p>
+					If you can dream it, I can build it. Intelligent web app require brilliant design and intuitive product strategy.</p>
 			</div>
 
 			<div className="infoHolder">
@@ -35,45 +34,45 @@ function ExpertInfo() {
 						<img src={html} alt="" />
 						<h3>HTML5</h3>
 						<img src={percent90} alt="" />
-						<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
+						<p className='smallPara'>Experience of coding practices based on commonly accepted standards to establish site layout and user interface</p>
 					</div>
 					<div className="skill">
 						<img src={css} alt="" />
 						<h3>CSS3</h3>
 						<img src={percent85} alt="" />
-						<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
+						<p className='smallPara'>Comfortable on using CSS Grid Layout applying the technique of progressive enhancement of the layout</p>
 					</div>
 					<div className="skill">
-					<img src={sass} alt="" />
+						<img src={sass} alt="" />
 						<h3>
 							SASS
 					</h3>
 						<img src={percent70} alt="" />
-						<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
+						<p className='smallPara'>Knowledge of nested properties interpolation and extend annotation</p>
 					</div>
 					<div className="skill">
-					<img id='javascript' src={js} alt="" />
+						<img id='javascript' src={js} alt="" />
 						<h3>
 							JAFASCRIPT
 					</h3>
 						<img src={percent75} alt="" />
-						<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
+						<p className='smallPara'>JS fundamentals, debugging, transpilers, ‘this’, references, ‘new’ operator, stack, recursions, inheritance, prototype etc</p>
 					</div>
 					<div className="skill">
-					<img src={react} alt="" />
+						<img src={react} alt="" />
 						<h3>
 							REACT
 					</h3>
 						<img src={percent85} alt="" />
-						<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
+						<p className='smallPara'> Comfortable on process.env.NODE_ENV, React-router, State, Props, Spread operator, Context API, Middleware</p>
 					</div>
 					<div className="skill">
-					<img id='node' src={node} alt="" />
+						<img id='node' src={node} alt="" />
 						<h3>
 							NODE
 					</h3>
 						<img src={percent60} alt="" />
-						<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
+						<p className='smallPara'>Express, mongoDB, CRUP operation, Refactor, Reduce and Reuse etc</p>
 					</div>
 				</div>
 				<div hidden className='graphHolder'>
