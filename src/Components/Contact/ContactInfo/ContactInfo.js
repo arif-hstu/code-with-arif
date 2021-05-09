@@ -14,8 +14,6 @@ function ContactInfo() {
 	const { register, handleSubmit, watch, formState: { errors } } = useForm();
 	const onSubmit = data => console.log(data);
 
-	console.log(watch("example"))
-
 	return (
 		<div className=" ContactInfo">
 			<div className='titleHolder'>
